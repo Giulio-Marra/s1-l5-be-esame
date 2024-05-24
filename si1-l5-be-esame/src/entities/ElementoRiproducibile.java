@@ -15,9 +15,8 @@ public class ElementoRiproducibile extends ElementoMultimediale {
 
     public void play() {
         if (player) {
-            for (int i = 1; i <= this.volume; i++) {
-                String puntoEsclamativo = "!".repeat(i);
-                System.out.println(nome + puntoEsclamativo);
+            for (int i = 1; i <= this.durata; i++) {
+                System.out.println(nome);
             }
         }
     }
