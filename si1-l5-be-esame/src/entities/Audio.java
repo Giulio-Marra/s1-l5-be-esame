@@ -2,9 +2,14 @@ package entities;
 
 import interfaces.AbbassaLuminosita;
 
+
 public class Audio extends ElementoRiproducibile implements AbbassaLuminosita {
-    public Audio(String nome, double durata, boolean player) {
+
+    public int volume;
+
+    public Audio(String nome, double durata, boolean player, int volume) {
         super(nome, durata, player);
+        this.volume = volume;
     }
 
     @Override
@@ -18,6 +23,23 @@ public class Audio extends ElementoRiproducibile implements AbbassaLuminosita {
                 System.out.println(nome + " - VOLUME= " + esclamativo);
             }
         }
+    }
+
+    public void abbassaVolume(boolean abbassa) {
+        if (abbassa) {
+            this.volume--;
+        }
+    }
+
+    public void alzaVolume(boolean alza) {
+        if (alza) {
+            this.volume++;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Audio [nome=" + nome + ", durata=" + durata + ", volume=" + volume + ", player=" + player + "]";
     }
 
 

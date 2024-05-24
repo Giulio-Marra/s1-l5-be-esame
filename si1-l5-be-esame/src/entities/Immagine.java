@@ -7,9 +7,9 @@ public class Immagine extends ElementoMultimediale implements AbbassaLuminosita,
 
     public int luminosita;
 
-    public Immagine(String nome) {
+    public Immagine(String nome, int luminosita) {
         super(nome);
-        this.luminosita = 3;
+        this.luminosita = luminosita;
     }
 
     @Override
@@ -31,5 +31,10 @@ public class Immagine extends ElementoMultimediale implements AbbassaLuminosita,
             String asterisco = "*".repeat(i);
             System.out.println(nome + " - LUMINOSITA= " + asterisco);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Immagine [nome=" + nome + ", luminosita=" + luminosita + "]";
     }
 }

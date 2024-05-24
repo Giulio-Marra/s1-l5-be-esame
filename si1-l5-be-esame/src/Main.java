@@ -1,14 +1,15 @@
 import entities.Audio;
 import entities.Immagine;
+import entities.MemorizzaElementi;
 import entities.Video;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Video video1 = new Video("VIDEO", 3, true);
-        Audio audio1 = new Audio("AUDIO", 2, true);
-        Immagine immagine1 = new Immagine("IMMAGINE");
+        Video video1 = new Video("VIDEO", 3, true, 3, 3);
+        Audio audio1 = new Audio("AUDIO", 2, true, 3);
+        Immagine immagine1 = new Immagine("IMMAGINE", 3);
 
         System.out.println("--------------------VIDEO BASE-------------------------");
         video1.play();
@@ -36,6 +37,10 @@ public class Main {
         System.out.println("--------------------IMMAGINE DOPO AVER CAMBIATO LUMINOSITA-------------------------");
         immagine1.abbassaLuminosità(true);
         immagine1.show();
+
+        System.out.println("--------------------CREAZIONE ARRAY-------------------------");
+        MemorizzaElementi primoelemento = new MemorizzaElementi();
+        primoelemento.aggiungiElementi();
 
 
     }

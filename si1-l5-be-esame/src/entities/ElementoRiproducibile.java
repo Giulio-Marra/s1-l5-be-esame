@@ -8,7 +8,7 @@ public class ElementoRiproducibile extends ElementoMultimediale {
 
     public ElementoRiproducibile(String nome, double durata, boolean player) {
         super(nome);
-        this.volume = 4;
+        this.volume = 3;
         this.durata = durata;
         this.player = player;
     }
