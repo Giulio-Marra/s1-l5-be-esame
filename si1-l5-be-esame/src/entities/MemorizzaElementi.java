@@ -60,6 +60,7 @@ public class MemorizzaElementi {
             switch (scelta) {
                 case 0:
                     System.out.println("Uscita...");
+                    scanner.close();
                     break;
                 case 1:
                     System.out.println("L'elemento alla posizione " + scelta + " è: " + arrayDiStringhe[scelta - 1]);
